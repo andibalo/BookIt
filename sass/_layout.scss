@@ -1,0 +1,89 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+  min-height: 50rem;
+  background-color: var(--grey-light-1);
+
+  @media (max-width: $bp-largest) {
+    margin: 0;
+  }
+
+  @media (max-width: $bp-large) {
+    //we set contianer max-width to 100% so it will not show above browser width
+    //it shows because we set max-width to 120rem so it stretches until the max 120rem width
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.header {
+  height: 7rem;
+  background-color: #ffffff;
+  display: flex;
+  border-bottom: 3px solid var(--color-light);
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    height: 13rem;
+    align-content: space-around;
+  }
+}
+
+.content {
+  display: flex;
+
+  @media (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  background-color: var(--color-primary);
+  flex: 0 0 20%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1;
+}
+
+.detail {
+  font-size: 1.3rem;
+  display: flex;
+  padding: 4.5rem;
+  background: var(--color-lighter);
+
+  @media (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media (max-width: $bp-small) {
+    flex-direction: column;
+  }
+}
+
+.description {
+  font-size: 1.4rem;
+  background: white;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: 0 2rem 4.5em rgba(0, 0, 0, 0.06);
+  padding: 3rem;
+
+  @media (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.user-review {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
